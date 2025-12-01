@@ -145,7 +145,7 @@ input::placeholder {
 }
 
 .guess-input input {
-  width: 50%;
+  max-width: 50%;
 }
 
 .guess-input button {
@@ -154,4 +154,18 @@ input::placeholder {
 
 .end-container {
 
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 1.25rem;
+  }
 }

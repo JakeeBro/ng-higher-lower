@@ -1,0 +1,11 @@
+.themes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+
+  border: 2px solid lime;
+  box-sizing: border-box;
+
+  width: 100%;
+}

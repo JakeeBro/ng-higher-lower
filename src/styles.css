@@ -25,7 +25,107 @@
   );
 }
 
-.theme-ocean {
+.theme-rose {
+  --background: rgba(219, 0, 102, 1);
+  --text: var(--text-dark);
+  --placeholder-text: rgba(255, 255, 255, 0.5);
+  --primary-accent: rgb(255, 199, 199);
+  --secondary-accent: rgb(255, 120, 201);
+  --text-gradient: linear-gradient(
+          to bottom right,
+          var(--primary-accent),
+          var(--secondary-accent)
+  );
+  --button-start: rgba(2, 0, 36, 0.25);
+  --button-end: rgba(9, 9, 121, 0.25);
+  --button-gradient: linear-gradient(
+          to top left,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+  --panel-gradient: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+}
+
+.theme-marigold {
+  --background: rgba(176, 91, 0, 1);
+  --text: var(--text-dark);
+  --placeholder-text: rgba(255, 255, 255, 0.5);
+  --primary-accent: rgb(255, 221, 0);
+  --secondary-accent: rgb(255, 153, 0);
+  --text-gradient: linear-gradient(
+          to bottom right,
+          var(--primary-accent),
+          var(--secondary-accent)
+  );
+  --button-start: rgba(2, 0, 36, 0.25);
+  --button-end: rgba(9, 9, 121, 0.25);
+  --button-gradient: linear-gradient(
+          to top left,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+  --panel-gradient: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+}
+
+.theme-sunflower {
+  --background: rgba(171, 111, 0, 1);
+  --text: var(--text-dark);
+  --placeholder-text: rgba(255, 255, 255, 0.5);
+  --primary-accent: rgb(249, 255, 186);
+  --secondary-accent: rgb(255, 213, 0);
+  --text-gradient: linear-gradient(
+          to bottom right,
+          var(--primary-accent),
+          var(--secondary-accent)
+  );
+  --button-start: rgba(2, 0, 36, 0.25);
+  --button-end: rgba(9, 9, 121, 0.25);
+  --button-gradient: linear-gradient(
+          to top left,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+  --panel-gradient: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+}
+
+.theme-aloe {
+  --background: rgba(42, 105, 0, 1);
+  --text: var(--text-dark);
+  --placeholder-text: rgba(255, 255, 255, 0.5);
+  --primary-accent: rgb(215, 255, 158);
+  --secondary-accent: rgb(128, 255, 0);
+  --text-gradient: linear-gradient(
+          to bottom right,
+          var(--primary-accent),
+          var(--secondary-accent)
+  );
+  --button-start: rgba(2, 0, 36, 0.25);
+  --button-end: rgba(9, 9, 121, 0.25);
+  --button-gradient: linear-gradient(
+          to top left,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+  --panel-gradient: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
+  );
+}
+
+.theme-orchid {
   --background: rgba(2, 0, 36, 1);
   --text: var(--text-light);
   --placeholder-text: rgba(255, 255, 255, 0.5);
@@ -50,28 +150,28 @@
   );
 }
 
-.theme-rose {
-  --background: rgba(219, 0, 102, 1);
-  --text: var(--text-dark);
+.theme-iris {
+  --background: rgba(57, 0, 97, 1);
+  --text: var(--text-light);
   --placeholder-text: rgba(255, 255, 255, 0.5);
-  --primary-accent: rgb(255, 199, 199);
-  --secondary-accent: rgb(255, 120, 201);
+  --primary-accent: rgb(255, 222, 253);
+  --secondary-accent: rgb(230, 0, 255);
   --text-gradient: linear-gradient(
-    to bottom right,
-    var(--primary-accent),
-    var(--secondary-accent)
+          to bottom right,
+          var(--primary-accent),
+          var(--secondary-accent)
   );
   --button-start: rgba(2, 0, 36, 0.25);
   --button-end: rgba(9, 9, 121, 0.25);
   --button-gradient: linear-gradient(
-    to top left,
-    rgba(255, 255, 255, 0.10),
-    rgba(255,255,255,0.05)
+          to top left,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
   );
   --panel-gradient: linear-gradient(
-    to bottom right,
-    rgba(255, 255, 255, 0.10),
-    rgba(255,255,255,0.05)
+          to bottom right,
+          rgba(255, 255, 255, 0.10),
+          rgba(255,255,255,0.05)
   );
 }
 
@@ -82,7 +182,7 @@ html, body {
   /*background: var(--background);*/
   background: linear-gradient(
     315deg,
-    var(--background) 20%,
+    var(--background),
     var(--secondary-accent)
   );
   color: var(--text);

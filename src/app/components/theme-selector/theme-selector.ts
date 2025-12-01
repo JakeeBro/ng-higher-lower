@@ -9,8 +9,12 @@ import { Component } from '@angular/core';
 export class ThemeSelector {
   // Array of all Defined Themes
   themes: string[] = [
-    'theme-ocean',
-    'theme-rose'
+    'theme-rose',
+    'theme-marigold',
+    'theme-sunflower',
+    'theme-aloe',
+    'theme-orchid',
+    'theme-iris',
   ]
 
   ngOnInit() {

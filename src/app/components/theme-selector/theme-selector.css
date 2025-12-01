@@ -1,11 +1,18 @@
 .themes {
+  padding: 0.5rem;
+
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
-  gap: 1rem;
+  row-gap: 0.5rem;
+  justify-content: space-between;
 
   border: 2px solid lime;
   box-sizing: border-box;
 
   width: 100%;
+}
+
+.themes button {
+  margin: 0;
 }

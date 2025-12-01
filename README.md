@@ -1,3 +1,2 @@
-# NgHigherLower
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+[Higher Lower](https://jakeebro.github.io/ng-higher-lower/)
+[Angular CLI v21.0.1](https://github.com/angular/angular-cli)

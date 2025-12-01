@@ -4,30 +4,32 @@
   <!-- Settings Container -->
   @if (!settingsApplied) {
     <div class="settings-container panel">
-      <form (ngSubmit)="setRange()" id="range-form">
-        <div class="range-container">
-          <h3>Range</h3>
-          <div class="range-input">
-            <input name="minValue" type="number" [(ngModel)]="minValue" placeholder="Min">
-            <input name="maxValue" type="number" [(ngModel)]="maxValue" placeholder="Max">
-            <button type="submit">Set</button>
+      <div class="pad">
+        <form (ngSubmit)="setRange()" id="range-form">
+          <div class="range-container">
+            <h3>Range</h3>
+            <div class="range-input">
+              <input name="minValue" type="number" [(ngModel)]="minValue" placeholder="Min">
+              <input name="maxValue" type="number" [(ngModel)]="maxValue" placeholder="Max">
+              <button type="submit">Set</button>
+            </div>
+            @if (rangeFeedback != '') {
+              <p class="feedback">{{ rangeFeedback }}</p>
+            }
           </div>
-          @if (rangeFeedback != '') {
-            <p class="feedback">{{ rangeFeedback }}</p>
+        </form>
+        <div class="limit-container">
+          <h3>Guess Limit</h3>
+          <input type="number" [(ngModel)]="limit" placeholder="Unlimited">
+          @if (limitFeedback != '') {
+            <p class="feedback">{{ limitFeedback }}</p>
           }
         </div>
-      </form>
-      <div class="limit-container">
-        <h3>Guess Limit</h3>
-        <input type="number" [(ngModel)]="limit" placeholder="Unlimited">
-        @if (limitFeedback != '') {
-          <p class="feedback">{{ limitFeedback }}</p>
+        <button id="playButton" (click)="applySettings()">Play</button>
+        @if (settingsFeedback != '') {
+          <p class="feedback">{{ settingsFeedback }}</p>
         }
       </div>
-      <button (click)="applySettings()">Play</button>
-      @if (settingsFeedback != '') {
-        <p class="feedback">{{ settingsFeedback }}</p>
-      }
     </div>
   }
 

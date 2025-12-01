@@ -175,7 +175,11 @@
   );
 }
 
-html, body {
+html {
+  background: black;
+}
+
+body {
   margin: 0;
   padding: 0;
 

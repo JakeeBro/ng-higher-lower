@@ -1,0 +1,35 @@
+.app-container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+app-game {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 500px;
+
+  flex: 1;
+
+  border: 2px solid cyan;
+}
+
+@media (max-width: 1100px) {
+
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 500px) {
+
+}

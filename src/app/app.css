@@ -13,8 +13,8 @@
 }
 
 app-game {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0;
+  padding: 0.5rem;
   max-width: 500px;
 
   flex: 1;

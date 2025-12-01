@@ -1,40 +1,33 @@
 :root {
   font-family: sans-serif;
-  --background: #ffffff;
-  --text: #111111;
-  --accent: #007bff;
+  --background: rgba(2, 0, 36, 1);
+  --text-light: rgba(255, 255, 255, 0.8);
+  --text-dark: rgba(0, 0, 0, 0.8);
+  --placeholder-text: rgba(255, 255, 255, 0.5);
+  --primary-accent: rgb(0, 212, 255);
+  --secondary-accent: rgb(9, 9, 121);
   --text-gradient: linear-gradient(
     to bottom right,
-    #00D4FF,
-    #090979
-  )
-}
-
-.theme-light {
-  --background: #ffffff;
-  --text: #111111;
-  --accent: #007bff;
-  --text-gradient: linear-gradient(
+    var(--primary-accent),
+    var(--secondary-accent)
+  );
+  --button-start: rgba(2, 0, 36, 0.25);
+  --button-end: rgba(9, 9, 121, 0.25);
+  --button-gradient: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.10),
+    rgba(255,255,255,0.05)
+  );
+  --panel-gradient: linear-gradient(
     to bottom right,
-    #00D4FF,
-    #090979
-  )
-}
-
-.theme-dark {
-  --background: #0d0d0d;
-  --text: #f2f2f2;
-  --accent: #ff8c00;
-  --text-gradient: linear-gradient(
-    to bottom right,
-    #00D4FF,
-    #090979
-  )
+    rgba(255, 255, 255, 0.10),
+    rgba(255,255,255,0.05)
+  );
 }
 
 .theme-ocean {
   --background: rgba(2, 0, 36, 1);
-  --text: rgba(255, 255, 255, 0.8);
+  --text: var(--text-light);
   --placeholder-text: rgba(255, 255, 255, 0.5);
   --primary-accent: rgb(0, 212, 255);
   --secondary-accent: rgb(9, 9, 121);
@@ -58,14 +51,28 @@
 }
 
 .theme-rose {
-  --background: #fff4f7;
-  --text: #330018;
-  --accent: #ff0055;
+  --background: rgba(219, 0, 102, 1);
+  --text: var(--text-dark);
+  --placeholder-text: rgba(255, 255, 255, 0.5);
+  --primary-accent: rgb(255, 199, 199);
+  --secondary-accent: rgb(255, 120, 201);
   --text-gradient: linear-gradient(
     to bottom right,
-    #00D4FF,
-    #090979
-  )
+    var(--primary-accent),
+    var(--secondary-accent)
+  );
+  --button-start: rgba(2, 0, 36, 0.25);
+  --button-end: rgba(9, 9, 121, 0.25);
+  --button-gradient: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.10),
+    rgba(255,255,255,0.05)
+  );
+  --panel-gradient: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.10),
+    rgba(255,255,255,0.05)
+  );
 }
 
 body {
@@ -82,7 +89,7 @@ body {
 }
 
 button {
-  background: var(--accent);
+  background: var(--button-gradient);
   color: var(--text);
 
   margin: 0;

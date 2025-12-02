@@ -8,19 +8,19 @@
   justify-content: flex-start;
   align-items: center;
 
-  border: 2px solid red;
+  /*border: 2px solid red;*/
   box-sizing: border-box;
 }
 
 .content {
-  border: 2px solid purple;
+  /*border: 2px solid purple;*/
   box-sizing: border-box;
 
   margin: 0;
   padding: 0;
 
   max-width: 500px;
-  height: 60vh;
+  /*height: 60vh;*/
 
   display: flex;
   flex-direction: column;
@@ -32,9 +32,9 @@ app-game {
   padding: 0.5rem;
   max-width: 500px;
 
-  flex: 1;
+  flex: none;
 
-  border: 2px solid cyan;
+  /*border: 2px solid cyan;*/
 }
 
 @media (max-width: 1100px) {

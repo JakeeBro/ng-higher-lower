@@ -36,32 +36,36 @@
   @if (settingsApplied && !gameOver) {
     <!-- Guess Input -->
     <div class="guess-container panel">
-      <p>Guess a number between {{ minValue }} and {{ maxValue }}</p>
-      @if (!bypassLimit) {
-        <p>Remaining Guesses: {{ limit }}</p>
-      }
-      <form (ngSubmit)="submitGuess(guessInput, guessButton)" id="guess-form">
-        <div class="guess-input">
-          <input #guessInput name="guess" type="number" [(ngModel)]="guess" placeholder="Guess">
-          <button #guessButton type="submit">Guess</button>
-        </div>
-      </form>
-
-      <!-- Feedback -->
-      <div class="feedback-container">
-        @if (guessFeedback != '') {
-          <p class="feedback">{{ guessFeedback }}</p>
+      <div class="pad">
+        <p>Guess a number between {{ minValue }} and {{ maxValue }}</p>
+        @if (!bypassLimit) {
+          <p>Remaining Guesses: {{ limit }}</p>
         }
-        <!--<p>{{ guessList }}</p>-->
+        <form (ngSubmit)="submitGuess(guessInput, guessButton)" id="guess-form">
+          <div class="guess-input">
+            <input #guessInput name="guess" type="number" [(ngModel)]="guess" placeholder="Number">
+            <button #guessButton type="submit">Guess</button>
+          </div>
+        </form>
+
+        <!-- Feedback -->
+        <div class="feedback-container">
+          @if (guessFeedback != '') {
+            <p class="feedback">{{ guessFeedback }}</p>
+          }
+          <!--<p>{{ guessList }}</p>-->
+        </div>
       </div>
     </div>
   }
 
   @if (gameOver) {
     <div class="end-container panel">
-      <p>{{ guessList }}</p>
-      <p>{{ endFeedback }}</p>
-      <button (click)="resetGame()">Reset Game</button>
+      <div class="pad">
+        <p class="feedback">{{ guessList }}</p>
+        <p class="feedback">{{ endFeedback }}</p>
+        <button (click)="resetGame()">Reset Game</button>
+      </div>
     </div>
   }
 </div>

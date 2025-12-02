@@ -175,7 +175,7 @@
   );
 }
 
-html, body {
+/*html, body {
   margin: 0;
   padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
 
@@ -190,7 +190,7 @@ html, body {
   color: var(--text);
 
   box-sizing: border-box;
-}
+}*/
 
 /*body::before {
   content: '';
@@ -199,6 +199,24 @@ html, body {
   background: linear-gradient(315deg, var(--background), var(--secondary-accent));
   z-index: -1;
 }*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: var(--text);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(315deg, var(--background), var(--secondary-accent));
+  z-index: -1;
+}
 
 button {
   background: var(--button-gradient);

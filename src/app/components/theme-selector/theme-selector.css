@@ -16,3 +16,60 @@
 .themes button {
   margin: 0;
 }
+
+.theme-menu {
+  position: relative;
+  width: max-content;
+}
+
+.theme-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--button-gradient);
+  cursor: pointer;
+}
+
+.theme-dropdown {
+  margin-top: 0.25rem;
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  display: none;
+
+  flex-direction: column;
+  gap: 0.25rem;
+
+  background: none;
+  border-radius: 12px;
+  padding: 0.5rem;
+
+  z-index: 100;
+}
+
+.theme-dropdown.open {
+  margin: 0.25rem 0 0 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.theme-dropdown button {
+  padding: 0.5rem 1rem;
+
+  background: var(--button-gradient);
+
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.theme-dropdown button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

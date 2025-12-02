@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {TitleCasePipe} from "@angular/common";
 
 @Component({
   selector: 'app-theme-selector',
-  imports: [],
+  imports: [
+    TitleCasePipe
+  ],
   templateUrl: './theme-selector.html',
   styleUrl: './theme-selector.css',
 })
@@ -17,11 +20,13 @@ export class ThemeSelector {
     'theme-iris',
   ]
 
+  menuOpen: boolean = false;
+
   ngOnInit() {
 
     // Reload the Saved Theme if it exists
     const savedTheme = localStorage.getItem('theme') ?? '';
-    this.setTheme(savedTheme);
+    if (savedTheme) this.setTheme(savedTheme);
   }
 
   setTheme(newTheme: string) {
@@ -33,5 +38,11 @@ export class ThemeSelector {
 
     // Save Theme
     localStorage.setItem('theme', newTheme);
+
+    this.menuOpen = false;
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
   }
 }

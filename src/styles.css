@@ -179,19 +179,17 @@ html {
   margin: 0;
   padding: 0;
 
-  background: black;
+  background: linear-gradient(
+          315deg,
+          var(--background),
+          var(--secondary-accent)
+  );
 }
 
 body {
   margin: 0;
   padding: 0;
 
-  /*background: var(--background);*/
-  background: linear-gradient(
-    315deg,
-    var(--background),
-    var(--secondary-accent)
-  );
   color: var(--text);
 }
 

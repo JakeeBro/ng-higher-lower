@@ -194,13 +194,13 @@ html, body {
   box-sizing: border-box;
 }
 
-body::before {
+/*body::before {
   content: '';
-  position: fixed; /* sticks to viewport */
+  position: fixed; !* sticks to viewport *!
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(315deg, var(--background), var(--secondary-accent));
   z-index: -1;
-}
+}*/
 
 /*html, body {
   margin: 0;

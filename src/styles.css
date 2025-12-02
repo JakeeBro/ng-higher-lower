@@ -181,11 +181,13 @@ html, body {
 
   min-height: 100dvh;
 
-  background: linear-gradient(
+  /*background: linear-gradient(
     315deg,
     var(--background),
     var(--secondary-accent)
-  );
+  );*/
+
+  background: black;
 
   color: var(--text);
 

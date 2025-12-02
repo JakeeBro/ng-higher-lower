@@ -146,6 +146,10 @@ input::placeholder {
   width: 100%
 }
 
+.limit-container input {
+  max-width: 50%;
+}
+
 .guess-container {
 
 }

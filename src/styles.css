@@ -206,6 +206,7 @@ html, body {
   height: 100%;
   color: var(--text);
   box-sizing: border-box;
+  background: black;
 }
 
 body::before {

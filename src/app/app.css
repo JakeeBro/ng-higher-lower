@@ -8,7 +8,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  /*border: 2px solid red;*/
+  border: 2px solid red;
   box-sizing: border-box;
 }
 
@@ -30,18 +30,17 @@
 }
 
 .content {
-  /*border: 2px solid purple;*/
+/*  border: 2px solid purple;
   box-sizing: border-box;
 
   margin: 0;
   padding: 0;
 
-  max-width: 500px;
-  /*height: 60vh;*/
+  min-width: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;*/
 }
 
 app-theme-selector {

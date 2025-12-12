@@ -1,5 +1,7 @@
 .game-container {
-  min-height: 100%;
+  max-width: 500px;
+
+  border: 2px solid lime;
 }
 
 h1 {
@@ -8,12 +10,6 @@ h1 {
 
   font-size: 2.5rem;
   text-align: center;
-
-  /*background: linear-gradient(
-    to top left,
-    rgba(9, 9, 121, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );*/
 
   background-image: var(--text-gradient);
 
@@ -35,6 +31,8 @@ h1 {
 
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 12px;
+  box-sizing: border-box;
+
   backdrop-filter: blur(20px);
   background: var(--panel-gradient);
 }
@@ -42,6 +40,8 @@ h1 {
 .pad {
   margin: 0;
   padding: 1rem;
+
+  /*width: 100%;*/
 
   display: flex;
   flex-direction: column;
@@ -71,18 +71,20 @@ h3 {
   font-weight: normal;
 }
 
-/* DELETE THIS ONE? */
-/*settings-container p {
-  margin: 0;
-  padding: 0;
-}*/
-
 /* Overall Range Container */
 .range-container {
   margin: 0;
   padding: 0;
 
   /*border: 2px solid lime;*/
+}
+
+#range-form {
+  width: 100%;
+}
+
+#guess-form {
+  width: 100%;
 }
 
 /* Flexbox to hold Inputs and Button */
@@ -124,11 +126,12 @@ input::placeholder {
 
 /* The Range Input Specifically */
 .range-input input {
-  width: 25%;
+  max-width: 25%;
 }
 
 .range-input button {
   margin-left: auto;
+  font-weight: normal;
 }
 
 .feedback-container {
@@ -164,11 +167,15 @@ input::placeholder {
 }
 
 .guess-input input {
-  max-width: 50%;
+  /*max-width: 50%;*/
+
+  flex: 1;        /* take all available space */
+  min-width: 0;   /* prevent weird overflow */
 }
 
 .guess-input button {
   margin-left: auto;
+  font-weight: normal;
 }
 
 .end-container {

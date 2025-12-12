@@ -181,12 +181,6 @@ html, body {
 
   min-height: 100dvh;
 
-  /*background: linear-gradient(
-    315deg,
-    var(--background),
-    var(--secondary-accent)
-  );*/
-
   background: black;
 
   color: var(--text);
@@ -194,28 +188,12 @@ html, body {
   box-sizing: border-box;
 }
 
-/*body::before {
-  content: '';
-  position: fixed; !* sticks to viewport *!
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(315deg, var(--background), var(--secondary-accent));
-  z-index: -1;
-}*/
-
 /*html, body {
   margin: 0;
   padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
   height: 100%;
   color: var(--text);
   box-sizing: border-box;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  top: -100px; left: -100px; right: -100px; bottom: -100px;
-  background: linear-gradient(315deg, var(--background), var(--secondary-accent));
-  z-index: -1;
 }*/
 
 button {

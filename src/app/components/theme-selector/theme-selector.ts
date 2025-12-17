@@ -26,9 +26,10 @@ export class ThemeSelector {
 
   ngOnInit() {
 
-    // Reload the Saved Theme if it exists
-    const savedTheme = localStorage.getItem('theme') ?? 'theme-orchid';
-    if (savedTheme) this.setTheme(savedTheme);
+    // Reload the Saved Theme if it exists, otherwise Default to Orchid
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme ?? 'theme-orchid';
+    this.setTheme(initialTheme);
   }
 
   setTheme(newTheme: string) {

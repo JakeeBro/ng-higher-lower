@@ -1,11 +1,19 @@
 <div class="app-container">
+
   <div class="background-view">
+
     <div class="content">
-      <app-theme-selector></app-theme-selector>
-      <app-game></app-game>
-      <app-panel></app-panel>
+      <app-theme-selector (menuStateChange)="handleMenuChange($event)"></app-theme-selector>
+
+      <app-game [hidden]="isThemeMenuOpen"></app-game>
     </div>
+
+    <div class="link-wrapper">
+      <a href="https://jakeebro.github.io/Portfolio/about" [innerHTML]="'Jake Poshepny, 2025'"></a>
+    </div>
+
   </div>
+
 </div>
 
 <router-outlet></router-outlet>

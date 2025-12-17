@@ -9,8 +9,8 @@
           <div class="range-container">
             <h3>Range</h3>
             <div class="range-input">
-              <input name="minValue" type="number" [(ngModel)]="minValue" placeholder="Min">
-              <input name="maxValue" type="number" [(ngModel)]="maxValue" placeholder="Max">
+              <input name="minValue" type="number" [(ngModel)]="minValue" placeholder="0">
+              <input name="maxValue" type="number" [(ngModel)]="maxValue" placeholder="100">
               <button type="submit">Set</button>
             </div>
             @if (rangeFeedback != '') {
@@ -44,7 +44,7 @@
         <form (ngSubmit)="submitGuess(guessInput, guessButton)" id="guess-form">
           <div class="guess-input">
             <input #guessInput name="guess" type="number" [(ngModel)]="guess" placeholder="Number">
-            <button #guessButton type="submit">Guess</button>
+            <button #guessButton type="submit" id="guessButton">Guess</button>
           </div>
         </form>
 
@@ -62,9 +62,9 @@
   @if (gameOver) {
     <div class="end-container panel">
       <div class="pad">
-        <p class="feedback">{{ guessList }}</p>
+        <p class="feedback">{{ guessList.join(', ') }}</p>
         <p class="feedback">{{ endFeedback }}</p>
-        <button (click)="resetGame()">Reset Game</button>
+        <button (click)="resetGame()" id="resetButton">Reset Game</button>
       </div>
     </div>
   }

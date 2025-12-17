@@ -1,22 +1,41 @@
+/* Theme Object */
 .theme-menu {
+  /*background-color: red;*/
+
   position: relative;
-  width: max-content;
+
+  width: 100%;
+  /*width: max-content;*/
 }
 
+/* Theme Button */
 .theme-toggle {
   padding: 0.5rem 1rem;
+
+  width: 100%;
+
+  background: var(--button-gradient);
+
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.05);
-  background: var(--button-gradient);
+
   cursor: pointer;
+
+  transition: transform 0.2s;
 }
 
+.theme-toggle:hover {
+  transform: scale(1.07);
+}
+
+/* Theme Dropdown Menu */
 .theme-dropdown {
   margin-top: 0.5rem;
   position: absolute;
 
-  top: 100%;
-  left: 0;
+  top: calc(100% + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
 
   display: none;
 
@@ -49,9 +68,12 @@
   border-radius: 12px;
 
   cursor: pointer;
+
+  transition: transform 0.2s;
 }
 
 .theme-dropdown button:hover {
+  transform: scale(1.07);
   background: rgba(255, 255, 255, 0.1);
 }
 

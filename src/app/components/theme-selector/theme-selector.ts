@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {TitleCasePipe} from "@angular/common";
+import { Component, EventEmitter, Output } from '@angular/core';
+import { TitleCasePipe } from "@angular/common";
 
 @Component({
   selector: 'app-theme-selector',
@@ -22,10 +22,12 @@ export class ThemeSelector {
 
   menuOpen: boolean = false;
 
+  @Output() menuStateChange = new EventEmitter<boolean>();
+
   ngOnInit() {
 
     // Reload the Saved Theme if it exists
-    const savedTheme = localStorage.getItem('theme') ?? '';
+    const savedTheme = localStorage.getItem('theme') ?? 'theme-orchid';
     if (savedTheme) this.setTheme(savedTheme);
   }
 
@@ -39,10 +41,12 @@ export class ThemeSelector {
     // Save Theme
     localStorage.setItem('theme', newTheme);
 
-    this.menuOpen = false;
+    // this.menuOpen = false;
+    // this.menuStateChange.emit(this.menuOpen);
   }
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
+    this.menuStateChange.emit(this.menuOpen);
   }
 }

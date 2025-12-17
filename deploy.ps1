@@ -1,6 +1,6 @@
 # Create a Backup of Changes on Branch (assumes changes are on main already... edit to make it deploy from branch and merge into main)
 git add .
-git commit -m "Pre Deploy"
+git commit -m "Pre Deploy" --allow-empty
 git push
 
 # Build (Ensures you are on main first)
@@ -25,7 +25,7 @@ Get-ChildItem -Path . -Force | Where-Object { @('.angular', '.git', '.idea', 'di
 
 # Commit the Empty Directory to force a refresh on the remote
 git add .
-git commit -m "Empty Directory"
+git commit -m "Empty Directory" --allow-empty
 git push
 
 # Copy files from the Temp Directory into the Current Directory

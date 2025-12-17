@@ -1,5 +1,7 @@
 :root {
   font-family: sans-serif;
+  --maxWidth: 500px;
+
   --background: rgba(2, 0, 36, 1);
   --text-light: rgba(255, 255, 255, 0.8);
   --text-dark: rgba(0, 0, 0, 0.8);

@@ -76,6 +76,8 @@ app-game {
 .link-wrapper {
   /*background-color: red;*/
 
+  margin: auto auto 1rem auto;
+
   width: 100%;
 
   text-align: center;
@@ -84,11 +86,11 @@ app-game {
 .link-wrapper a {
   padding: 0.5rem 1rem;
 
-  position: fixed;
+  /*position: fixed;*/
 
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  /*bottom: 1rem;*/
+  /*left: 50%;*/
+  /*transform: translateX(-50%);*/
 
   color: var(--text);
 
@@ -104,16 +106,4 @@ app-game {
 
 .link-wrapper a:hover {
   transform: translateX(-50%) scale(1.07);
-}
-
-@media (max-width: 1100px) {
-
-}
-
-@media (max-width: 750px) {
-
-}
-
-@media (max-width: 500px) {
-
 }
